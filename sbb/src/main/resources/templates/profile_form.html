@@ -1,0 +1,22 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
+    <div class="my-3 border-bottom">
+        <div>
+            <h4>프로필</h4>
+        </div>
+    </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">사용자ID</label>
+            <div th:text="${siteuser.username}" class="form-control" id="username"></div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">패스워드</label>
+            <input type="password" th:value="${siteuser.password}" class="form-control" id="password">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">이메일</label>
+            <div type="email" th:text="${siteuser.email}" class="form-control" id="email"></div>
+        </div>
+        <a th:href="@{/user/changePassword}" class="btn btn-primary">패스워드 변경</a>
+</div>
+</html>

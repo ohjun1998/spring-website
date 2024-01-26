@@ -1,0 +1,5 @@
+<!--오류메시지 공통 템플릿-->
+<div th:fragment="formErrorsFragment" class="alert alert-danger" 
+    role="alert" th:if="${error}">
+    <div th:text="${error}" />
+</div>
