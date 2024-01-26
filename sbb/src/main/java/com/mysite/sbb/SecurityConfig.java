@@ -44,11 +44,9 @@ public class SecurityConfig {
             .headers((headers) -> headers
                     .addHeaderWriter(new XFrameOptionsHeaderWriter(
                         XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
-				/*
-				 * .contentSecurityPolicy(csp -> csp .policyDirectives("default-src 'self'; " +
-				 * "style-src 'self' https://stackpath.bootstrapcdn.com; " +
-				 * "script-src 'self'; " + "object-src 'none';"))
-				 */
+                    .contentSecurityPolicy(csp -> csp .policyDirectives("default-src 'self'; " +
+                    		"style-src 'self' https://stackpath.bootstrapcdn.com; " +
+                    		"script-src 'self'; " + "object-src 'none';"))
                     )
             .formLogin((formLogin) -> formLogin
                     .loginPage("/user/login")//로그인 URL
